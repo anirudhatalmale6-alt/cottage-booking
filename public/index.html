@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mori no Yado — Cottage Rentals</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <span class="brand-mark">🌲</span>
+        <span class="brand-name">Mori&nbsp;no&nbsp;Yado</span>
+      </div>
+      <nav class="nav">
+        <a href="#cottages">Cottages</a>
+        <a href="#" class="ghost">Owner Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <h1>Your quiet escape in the forest</h1>
+      <p class="hero-sub">Ten cottages among the pines. Book in a few taps — pay by card, or reserve and pay cash on arrival.</p>
+
+      <form id="search" class="search-card">
+        <div class="field">
+          <label>Check-in</label>
+          <input type="date" id="check_in" required />
+        </div>
+        <div class="field">
+          <label>Check-out</label>
+          <input type="date" id="check_out" required />
+        </div>
+        <div class="field">
+          <label>Guests</label>
+          <select id="guests">
+            <option value="1">1</option><option value="2" selected>2</option>
+            <option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option><option value="6">6</option>
+            <option value="7">7</option><option value="8">8</option>
+          </select>
+        </div>
+        <button type="submit" class="btn primary">Search availability</button>
+      </form>
+      <p id="search-status" class="search-status"></p>
+    </div>
+  </section>
+
+  <main id="cottages" class="wrap">
+    <h2 class="section-title">Our cottages</h2>
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <!-- Booking modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Mori no Yado Cottage Rentals · Nagano, Japan</p>
+      <p class="muted">Demo build · Stage 1 preview</p>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
