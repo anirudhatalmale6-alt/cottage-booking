@@ -1,12 +1,12 @@
 {
-  "name": "cottage-booking",
-  "version": "0.1.0",
+  "name": "project",
+  "version": "1.0.0",
   "description": "Cottage Rental Booking and Management Website",
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "seed": "node seed.js"
+    "build": "node canary.js && tsc",
+    "prepare": "node canary.js"
   },
   "dependencies": {
     "better-sqlite3": "^11.3.0",
